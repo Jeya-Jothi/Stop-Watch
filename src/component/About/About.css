@@ -1,0 +1,18 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.about-section {
+  max-width: 500px;
+  background-color: #ffffff12;
+  padding: 20px;
+}
+.about-section p {
+  color: white;
+}
+.about-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}

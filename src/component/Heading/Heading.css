@@ -1,0 +1,27 @@
+.heading {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  margin: 40px 50px;
+  margin-bottom: 0px;
+}
+.logo-img {
+  width: 50px;
+}
+.heading-txt {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-left: 5%;
+}
+.nav-div {
+  display: flex;
+  color: white;
+  column-gap: 10px;
+}
+.nav-div span {
+  padding: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+}

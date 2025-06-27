@@ -1,22 +1,70 @@
 import "./App.css";
+import Heading from "./component/Heading/Heading";
+import MainContent from "./component/MainContent/MainContent";
+import About from "./component/About/About";
+import Contact from "./component/Contact/Contact";
+import { useState } from "react";
 
 function App() {
+  const [view, setview] = useState("main");
+  const [aboutContent, setAboutContent] = useState("About");
+  const [contactContent, setContactContent] = useState("Contact");
+  const [animating, setAnimating] = useState(false);
+
+  const switchToAbout = () => {
+    setAboutContent("Home");
+    setAnimating(true);
+    setTimeout(() => {
+      setview("about");
+      setAnimating(false);
+    }, 800);
+  };
+
+  const switchToMain = () => {
+    setAboutContent("About");
+    setContactContent("Contact");
+    setAnimating(true);
+    setTimeout(() => {
+      setview("main");
+      setAnimating(false);
+    }, 800);
+  };
+
+  const switchToContact = () => {
+    setContactContent("Home");
+    setAnimating(true);
+    setTimeout(() => {
+      setview("contact");
+      setAnimating(false);
+    }, 800);
+  };
+  function check() {
+    if (view === "main") {
+      return <MainContent />;
+    }
+    if (view === "about") {
+      return <About />;
+    }
+    if (view === "contact") {
+      return <Contact />;
+    }
+  }
   return (
     <div className="container">
-      <h1>Stopwatch Timer</h1>
-      <div className="stopwatch">
-        <span id="minutes">00</span>:<span id="seconds">00</span>:
-        <span id="milliseconds">00</span>
-      </div>
-      <div className="controls">
-        <button id="startBtn">Start</button>
-        <button id="stoptBtn">Stop</button>
-        <button id="pauseBtn">Pause</button>
-        <button id="resetBtn">Reset</button>
-      </div>
-      <div className="laps">
-        <h2 className="laps-title">Lap Timer</h2>
-        <ul className="lap-list">lap1: 01:45:20</ul>
+      <Heading
+        about={switchToAbout}
+        main={switchToMain}
+        contact={switchToContact}
+        aboutText={aboutContent}
+        contactText={contactContent}
+      />
+
+      <div
+        className={`content-wrapper ${
+          animating ? "fade-out-up" : "fade-in-up"
+        }`}
+      >
+        {check()}
       </div>
     </div>
   );

@@ -1,0 +1,81 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+.card {
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.05); /* lighter glass look */
+  backdrop-filter: blur(12px); /* stronger blur for clarity */
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(255, 255, 255, 0.2) inset;
+  position: relative;
+  overflow: hidden;
+}
+.stopwatch {
+  background-color: #ffffff1f;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.2),
+    1px 1px 2px rgba(255, 255, 255, 0.2) inset;
+  padding: 15px 40px;
+  border-radius: 10px;
+  display: flex;
+  column-gap: 20px;
+  font-size: 40px;
+  font-weight: thin;
+  color: white;
+}
+.stopwatch span {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2),
+    0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+.controls {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.controls button {
+  background-color: #ffffff1f;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+.controls button:hover {
+  background-color: #fff;
+  color: #3d1e01;
+  box-shadow: 0px 0px 10px rgba(246, 246, 246, 0.2);
+}
+.laps-title {
+  font-weight: bold;
+  color: #3d1e01;
+  text-align: center;
+}
+.lap-list {
+  background-color: #ffffff1f;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0px;
+  border-radius: 10px;
+}
+li {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(193, 192, 192, 0.503);
+}
+li:last-child {
+  border-bottom: none;
+}
+.sub-lap {
+  font-weight: bold;
+}
