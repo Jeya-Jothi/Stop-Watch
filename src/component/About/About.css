@@ -5,14 +5,34 @@
   height: 70vh;
 }
 .about-section {
-  max-width: 500px;
+  max-width: 50%;
   background-color: #ffffff12;
   padding: 20px;
+  border-radius: 20px;
 }
 .about-section p {
   color: white;
+  text-align: justify;
+  font-size: 20px;
 }
-.about-title {
+.about-section .about-title {
   font-size: 30px;
   margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(247, 245, 245, 0.421);
+}
+.about-section .key-features {
+  text-align: center;
+  margin: 3% 0%;
+}
+.key-card {
+  display: flex;
+  column-gap: 5%;
+}
+.key-card p {
+  text-align: left;
+  font-size: 16px;
+  background-color: #fcfbf91d;
+  padding: 10px;
+  border-radius: 10px;
 }

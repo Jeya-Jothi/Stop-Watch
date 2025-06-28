@@ -1,17 +1,32 @@
+a {
+  text-decoration: none;
+  color: white;
+}
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
 }
-.contact {
+.contact-card {
   max-width: 500px;
   background-color: #ffffff12;
   padding: 20px;
   color: white;
+  border-radius: 20px;
 }
 
 .contact-title {
   font-size: 30px;
   margin-bottom: 30px;
+  text-align: center;
+}
+.contact-logo {
+  width: 40px;
+}
+.reach-me-card a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 10px;
 }
