@@ -36,3 +36,25 @@
   padding: 10px;
   border-radius: 10px;
 }
+/* Responsive */
+
+/* Mobile */
+
+@media (max-width: 425px) {
+  .about-section {
+    max-width: 70%;
+  }
+  .about-section p {
+    font-size: 14px;
+  }
+  .about-section .about-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .about-section .key-features {
+    font-size: 16px;
+  }
+  .key-card p {
+    font-size: 12px;
+  }
+}
