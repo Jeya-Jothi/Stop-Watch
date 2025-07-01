@@ -66,6 +66,9 @@ function App() {
       >
         {check()}
       </div>
+      <div className="copyright-div">
+        <p>{new Date().getFullYear()} © Jeya Jothi | All rights reserved</p>
+      </div>
     </div>
   );
 }
